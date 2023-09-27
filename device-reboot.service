@@ -1,0 +1,11 @@
+[Unit] 
+Description=Reboot when shutdown 
+DefaultDependencies=no 
+Before=shutdown.target reboot.target halt.target 
+
+[Service] 
+Type=oneshot 
+ExecStart=shutdown -r now 
+
+[Install] 
+WantedBy=halt.target reboot.target shutdown.target 
