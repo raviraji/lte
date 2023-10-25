@@ -12,4 +12,4 @@ pg.output(4, 0)
 
 time.sleep(5) 
 
-pg.output(4,1
+pg.output(4,1)
