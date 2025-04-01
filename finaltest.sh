@@ -28,7 +28,7 @@ sudo tee /etc/ImageMagick-6/policy.xml > /dev/null <<EOT
   <policy domain="coder" rights="none" pattern="XPS" />
 </policymap>
 EOT
-cd /home/dt/QC
+/home/dt/QC/.test.sh > text.txt
 echo ">>>>>>>>>>>>---------------------------------------------------------------------------------<<<<<<<<<<<<<<<<<<<<<"
 file=$(cat /etc/remote-iot/configure | grep name)
 filename=${file:14:4}
