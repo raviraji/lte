@@ -31,7 +31,7 @@ EOT
 echo ">>>>>>>>>>>>---------------------------------------------------------------------------------<<<<<<<<<<<<<<<<<<<<<"
 file=$(cat /etc/remote-iot/configure | grep name)
 filename=${file:14:4}
-./test.sh>text.txt
+/home/dt/QC/./test.sh>text.txt
 convert -size 2480x3508 -background white -fill black -font Courier label:"$(cat text.txt)" ref.jpg
 echo "---------------------------------------------------script converted to jpg----------------------------------------"
 img2pdf ref.jpg -o $filename.pdf
