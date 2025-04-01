@@ -28,15 +28,14 @@ sudo tee /etc/ImageMagick-6/policy.xml > /dev/null <<EOT
   <policy domain="coder" rights="none" pattern="XPS" />
 </policymap>
 EOT
-sudo mkdir /home/dt/QC
-cd /home/dt/QC
+echo ">>>>>>>>>>>>---------------------------------------------------------------------------------<<<<<<<<<<<<<<<<<<<<<"
 file=$(cat /etc/remote-iot/configure | grep name)
 filename=${file:14:-20}
 ./test.sh>text.txt
 convert -size 2480x3508 -background white -fill black -font Courier label:"$(cat text.txt)" ref.jpg
-echo "----------------------------------------script converted to jpg----------------------------------------"
+echo "---------------------------------------------------script converted to jpg----------------------------------------"
 img2pdf ref.jpg -o $filename.pdf
 sleep 1
-echo "-----------------------------------------------pdf is uploading-----------------------------------------------"
+echo "---------------------------------------------------pdf is uploading-----------------------------------------------"
 sshpass -p detect12345 scp $filename.pdf iot@172.16.100.173:/home/iot/QC-form-all
-echo "++++++++++++++++++++++++++++++++++++++++++++Uploaded done++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "+++++++++++++++++++++++++++++++++++++++++++++++++Uploaded done++++++++++++++++++++++++++++++++++++++++++++++++++++"
