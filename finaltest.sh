@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 sudo tee /etc/ImageMagick-6/policy.xml > /dev/null <<EOT
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE policymap [
