@@ -53,4 +53,4 @@ do
 done
  
 # echo "sudo reboot"
-sudo reboot
+/sbin/reboot
