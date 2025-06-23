@@ -1,0 +1,16 @@
+[Unit] 
+Description=LTE Check Service 
+After=network.target 
+StartLimitIntervalSec=0 
+
+[Service] 
+Type=simple 
+Restart=always 
+RestartSec=10 
+User=root 
+Group=root 
+WorkingDirectory=/home/dt 
+ExecStart=/bin/bash /home/pi/network_check.sh 
+
+[Install] 
+WantedBy=multi-user.target  
