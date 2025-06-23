@@ -32,7 +32,7 @@ done
 if [[ "${g_success_count}" -eq "0"  ]]; then 
   echo "network reboot" 
   sleep 2
-sudo reboot
+/sbin/reboot
 else 
   echo "connection status is good, n_success = ${g_success_count}" 
 fi
